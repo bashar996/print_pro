@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:print_pro_hashtag/my_orders/orders_list.dart';
+import 'package:print_pro_hashtag/cart/cart_list.dart';
 
-class MyOrdersBody extends StatefulWidget {
+class CartBody extends StatefulWidget {
   @override
-  _MyOrdersBodyState createState() => _MyOrdersBodyState();
+  _CartBodyState createState() => _CartBodyState();
 }
 
-class _MyOrdersBodyState extends State<MyOrdersBody> {
+class _CartBodyState extends State<CartBody> {
   @override
   Widget build(BuildContext context) {
     var screenWidth = MediaQuery.of(context).size.width;
@@ -15,8 +15,8 @@ class _MyOrdersBodyState extends State<MyOrdersBody> {
       top: false,
       bottom: true,
       child: Container(
-        height: screenHeight,
         width: screenWidth,
+        height: screenHeight,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -38,7 +38,7 @@ class _MyOrdersBodyState extends State<MyOrdersBody> {
                     ),
                   ),
                   Text(
-                    'My Orders',
+                    'Cart',
                     style: TextStyle(
                       color: Colors.black.withOpacity(0.5),
                       fontWeight: FontWeight.w600,
@@ -55,11 +55,10 @@ class _MyOrdersBodyState extends State<MyOrdersBody> {
               ),
             ),
             Expanded(
-              child: Padding(
-                padding: const EdgeInsets.only(left: 10.0, right: 10),
-                child: OrdersList(),
-              ),
-            ),
+                child: Padding(
+              padding: const EdgeInsets.only(left: 10.0, right: 10),
+              child: CartList(),
+            ))
           ],
         ),
       ),

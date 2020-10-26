@@ -16,16 +16,16 @@ class _ContactUsBodyState extends State<ContactUsBody> {
       width: screenWidth,
       height: screenHeight,
       child: SingleChildScrollView(
-        child: Column (
+        child: Column(
           children: [
             Stack(
               children: [
-                Container (
-                  padding: EdgeInsets.only(top : screenHeight * .12),
+                Container(
+                  padding: EdgeInsets.only(top: screenHeight * .12),
                   height: screenHeight * .37,
                   width: screenWidth,
-                  decoration: BoxDecoration (
-                    gradient: LinearGradient (
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
                       colors: [
                         Color(0xFFA6D5EE),
                         Color(0xFF9EC0F8),
@@ -38,17 +38,17 @@ class _ContactUsBodyState extends State<ContactUsBody> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text (
+                      Text(
                         'GET IN TOUCH!',
-                        style: TextStyle (
+                        style: TextStyle(
                           fontSize: 30,
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Text (
+                      Text(
                         'Always within your reach',
-                        style: TextStyle (
+                        style: TextStyle(
                           fontSize: 16,
                           color: Colors.white,
                         ),
@@ -57,36 +57,39 @@ class _ContactUsBodyState extends State<ContactUsBody> {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top : screenHeight * .24),
+                  padding: EdgeInsets.only(top: screenHeight * .24),
                   child: Center(
                     child: SvgPicture.asset(
-                        'assets/svg/contact-us.svg',
-                    width: 150,
-                    height: 150,),
+                      'assets/svg/contact-us.svg',
+                      width: 150,
+                      height: 150,
+                    ),
                   ),
                 ),
-                Container (
-                  padding: EdgeInsets.only(left: 10.0 , right: 10.0 , top : 50),
+                Container(
+                  padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 50),
                   height: 80,
                   width: screenWidth,
-                  child: Row (
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      IconButton (
-                        onPressed: (){
+                      IconButton(
+                        onPressed: () {
                           Navigator.pop(context);
                         },
-                        icon: Icon (Icons.arrow_back_ios,
-                          color: Colors.white,),
+                        icon: Icon(
+                          Icons.arrow_back_ios,
+                          color: Colors.white,
+                        ),
                       ),
                     ],
                   ),
                 ),
               ],
             ),
-            Container (
-              margin: EdgeInsets.only(top : 20),
-              padding: EdgeInsets.symmetric(vertical: 8 , horizontal: 20),
+            Container(
+              margin: EdgeInsets.only(top: 20),
+              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 20),
               height: 60,
               width: screenWidth * .8,
               decoration: BoxDecoration(
@@ -94,133 +97,153 @@ class _ContactUsBodyState extends State<ContactUsBody> {
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
-                    offset: Offset (1,1),
+                    offset: Offset(1, 1),
                     color: Colors.grey.withOpacity(0.6),
                     blurRadius: 2.0,
                     spreadRadius: 2.0,
                   ),
                 ],
               ),
-              child: Row (
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Icon (Icons.phone,
-                  color: Colors.blue,
-                  size: 25,),
-                  SizedBox(width: 25,),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text ('Phone',
-                      style: TextStyle(
-                        color: Colors.lightBlue,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18
-                      ),),
-                      Text ('092749832749',
-                        style: TextStyle(
-                            color: kTextBlackColor,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 16
-                        ),),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            Container (
-              margin: EdgeInsets.only(top : 20),
-              padding: EdgeInsets.symmetric(vertical: 8 , horizontal: 20),
-              height: 60,
-              width: screenWidth * .8,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: [
-                  BoxShadow(
-                    offset: Offset (1,1),
-                    color: Colors.grey.withOpacity(0.6),
-                    blurRadius: 2.0,
-                    spreadRadius: 2.0,
-                  ),
-                ],
-              ),
-              child: Row (
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Icon (Icons.alternate_email,
+                  Icon(
+                    Icons.phone,
                     color: Colors.blue,
-                    size: 25,),
-                  SizedBox(width: 25,),
+                    size: 25,
+                  ),
+                  SizedBox(
+                    width: 25,
+                  ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text ('Email',
+                      Text(
+                        'Phone',
                         style: TextStyle(
                             color: Colors.lightBlue,
                             fontWeight: FontWeight.bold,
-                            fontSize: 18
-                        ),),
-                      Text ('PrintingPro@hashtag.com',
+                            fontSize: 18),
+                      ),
+                      Text(
+                        '092749832749',
                         style: TextStyle(
                             color: kTextBlackColor,
                             fontWeight: FontWeight.w600,
-                            fontSize: 16
-                        ),),
+                            fontSize: 16),
+                      ),
                     ],
                   ),
                 ],
               ),
             ),
-            Container (
-              margin: EdgeInsets.only(top : 20),
-              padding: EdgeInsets.symmetric(vertical: 8 , horizontal: 20),
+            Container(
+              margin: EdgeInsets.only(top: 20),
+              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 20),
+              height: 60,
               width: screenWidth * .8,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
-                    offset: Offset (1,1),
+                    offset: Offset(1, 1),
                     color: Colors.grey.withOpacity(0.6),
                     blurRadius: 2.0,
                     spreadRadius: 2.0,
                   ),
                 ],
               ),
-              child: Row (
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Icon (Icons.map,
+                  Icon(
+                    Icons.alternate_email,
                     color: Colors.blue,
-                    size: 25,),
-                  SizedBox(width: 25,),
+                    size: 25,
+                  ),
+                  SizedBox(
+                    width: 25,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Email',
+                        style: TextStyle(
+                            color: Colors.lightBlue,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18),
+                      ),
+                      Text(
+                        'PrintingPro@hashtag.com',
+                        style: TextStyle(
+                            color: kTextBlackColor,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 20),
+              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 20),
+              width: screenWidth * .8,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    offset: Offset(1, 1),
+                    color: Colors.grey.withOpacity(0.6),
+                    blurRadius: 2.0,
+                    spreadRadius: 2.0,
+                  ),
+                ],
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.map,
+                    color: Colors.blue,
+                    size: 25,
+                  ),
+                  SizedBox(
+                    width: 25,
+                  ),
                   Flexible(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text ('Location',
+                        Text(
+                          'Location',
                           style: TextStyle(
                               color: Colors.lightBlue,
                               fontWeight: FontWeight.bold,
-                              fontSize: 18
-                          ),),
-                        SizedBox(height: 10,),
+                              fontSize: 18),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
                         Container(
                           width: screenWidth * .8,
-                          child: Text ('Printing Pro @hashtag .com @hashtag .com Printing Pro @hashtag .com',
+                          child: Text(
+                            'Printing Pro @hashtag .com @hashtag .com Printing Pro @hashtag .com',
                             maxLines: 7,
                             style: TextStyle(
                                 color: kTextBlackColor,
                                 fontWeight: FontWeight.w600,
-                                fontSize: 15
-                            ),),
+                                fontSize: 15),
+                          ),
                         ),
                       ],
                     ),
@@ -228,24 +251,24 @@ class _ContactUsBodyState extends State<ContactUsBody> {
                 ],
               ),
             ),
-            Container (
-              margin: EdgeInsets.only(top : 20),
-              padding: EdgeInsets.symmetric(vertical: 8 , horizontal: 20),
+            Container(
+              margin: EdgeInsets.only(top: 20),
+              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 20),
               height: 100,
-              width: screenWidth * .8,
+              width: screenWidth * .83,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
-                    offset: Offset (1,1),
+                    offset: Offset(1, 1),
                     color: Colors.grey.withOpacity(0.6),
                     blurRadius: 2.0,
                     spreadRadius: 2.0,
                   ),
                 ],
               ),
-              child: Row (
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -253,57 +276,53 @@ class _ContactUsBodyState extends State<ContactUsBody> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text ('Follow Us ',
+                      Text(
+                        'Follow Us ',
                         style: TextStyle(
                             color: Colors.lightBlue,
                             fontWeight: FontWeight.bold,
-                            fontSize: 18
-                        ),),
+                            fontSize: 18),
+                      ),
                       Container(
                         width: screenWidth * .7,
-                        child: Row (
+                        child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             InkWell(
-                              onTap: (){
-                              },
-                              child: SvgPicture.asset (
+                              onTap: () {},
+                              child: SvgPicture.asset(
                                 'assets/svg/linkedin.svg',
                                 width: 35,
                                 height: 35,
                               ),
                             ),
                             InkWell(
-                              onTap: (){
-                              },
-                              child: SvgPicture.asset (
+                              onTap: () {},
+                              child: SvgPicture.asset(
                                 'assets/svg/whatsapp.svg',
                                 width: 35,
                                 height: 35,
                               ),
                             ),
                             InkWell(
-                              onTap: (){
-                              },
-                              child: SvgPicture.asset (
+                              onTap: () {},
+                              child: SvgPicture.asset(
                                 'assets/svg/instagram.svg',
                                 width: 35,
                                 height: 35,
                               ),
                             ),
                             InkWell(
-                              onTap: (){
-                              },
-                              child: SvgPicture.asset (
+                              onTap: () {},
+                              child: SvgPicture.asset(
                                 'assets/svg/twitter.svg',
                                 width: 35,
                                 height: 35,
                               ),
                             ),
                             InkWell(
-                              onTap: (){
-                              },
-                              child: SvgPicture.asset (
+                              onTap: () {},
+                              child: SvgPicture.asset(
                                 'assets/svg/facebook.svg',
                                 width: 35,
                                 height: 35,

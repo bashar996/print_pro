@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:print_pro_hashtag/Settings/body.dart';
+import 'package:print_pro_hashtag/settings/body.dart';
 
 class Settings extends StatefulWidget {
   @override
@@ -9,7 +9,7 @@ class Settings extends StatefulWidget {
 class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold (
+    return Scaffold(
       body: SettingsBody(),
     );
   }

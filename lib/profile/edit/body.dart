@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:print_pro_hashtag/colors.dart';
 import 'package:print_pro_hashtag/custom_widget.dart';
+import 'package:print_pro_hashtag/profile/edit/change_password/change_passowrd.dart';
 
 class EditProfileBody extends StatefulWidget {
   @override
@@ -13,38 +14,40 @@ class _EditProfileBodyState extends State<EditProfileBody> {
     var screenWidth = MediaQuery.of(context).size.width;
     var screenHeight = MediaQuery.of(context).size.height;
     return SafeArea(
-      top : false ,
+      top: false,
       bottom: true,
       child: Container(
         height: screenHeight,
         width: screenWidth,
         child: Column(
           children: [
-            Container (
-              margin: EdgeInsets.only(top: 50.0 ),
-              padding: EdgeInsets.only(left: 10.0 , right: 10.0 ),
+            Container(
+              margin: EdgeInsets.only(top: 50.0),
+              padding: EdgeInsets.only(left: 10.0, right: 10.0),
               height: 80,
               width: screenWidth,
-              child: Row (
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  IconButton (
-                    onPressed: (){
+                  IconButton(
+                    onPressed: () {
                       Navigator.pop(context);
                     },
-                    icon: Icon (Icons.arrow_back_ios,
-                      color: Colors.blue,),
+                    icon: Icon(
+                      Icons.arrow_back_ios,
+                      color: Colors.blue,
+                    ),
                   ),
-                  Text (
+                  Text(
                     'Edit Profile',
-                    style: TextStyle (
+                    style: TextStyle(
                       color: Colors.black.withOpacity(0.5),
                       fontWeight: FontWeight.w600,
                       fontSize: 25,
                     ),
                   ),
-                  IconButton (
-                    icon: Icon (
+                  IconButton(
+                    icon: Icon(
                       Icons.person_add,
                       color: Colors.transparent,
                     ),
@@ -57,24 +60,23 @@ class _EditProfileBodyState extends State<EditProfileBody> {
                 child: Column(
                   children: [
                     Stack(
-                      children :[
-                        Container (
+                      children: [
+                        Container(
                           margin: EdgeInsets.all(30),
                           width: 160,
                           height: 160,
-                          decoration: BoxDecoration (
+                          decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(100),
                               boxShadow: [
-                                BoxShadow (
-                                  offset: Offset (1,1),
+                                BoxShadow(
+                                  offset: Offset(1, 1),
                                   spreadRadius: 2.0,
                                   blurRadius: 2.0,
                                   color: Colors.grey.withOpacity(0.5),
                                 ),
-                              ]
-                          ),
-                          child: Center (
-                            child: CircleAvatar (
+                              ]),
+                          child: Center(
+                            child: CircleAvatar(
                               radius: 80,
                               backgroundColor: Colors.white,
                               child: Image.asset('assets/profile.png'),
@@ -84,28 +86,29 @@ class _EditProfileBodyState extends State<EditProfileBody> {
                         Positioned(
                           right: 35,
                           top: 35,
-                          child: Container (
+                          child: Container(
                             // padding: EdgeInsets.only(left:  , bottom: 5 , right: 5 , top: 5),
                             width: 40,
                             height: 40,
-                            decoration: BoxDecoration (
+                            decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(30),
                             ),
-                            child: Container (
+                            child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                               ),
-                              child: IconButton (
-                                onPressed: (){},
-                                icon: Icon (Icons.mode_edit,
-                                  color: kTextBlueColor,),
+                              child: IconButton(
+                                onPressed: () {},
+                                icon: Icon(
+                                  Icons.mode_edit,
+                                  color: kTextBlueColor,
+                                ),
                               ),
                             ),
                           ),
                         ),
                       ],
-
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -126,7 +129,7 @@ class _EditProfileBodyState extends State<EditProfileBody> {
                         context: context,
                         hasSuffix: false,
                         isSecure: false,
-                        input: TextInputType.name,
+                        input: TextInputType.emailAddress,
                       ),
                     ),
                     Padding(
@@ -137,21 +140,26 @@ class _EditProfileBodyState extends State<EditProfileBody> {
                         context: context,
                         hasSuffix: false,
                         isSecure: false,
-                        input: TextInputType.name,
+                        input: TextInputType.number,
                       ),
                     ),
-                    Container (
+                    Container(
                       margin: EdgeInsets.only(top: 10),
                       height: 40,
-                      decoration: BoxDecoration (
+                      decoration: BoxDecoration(
                         color: Colors.blue,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: FlatButton (
-                        onPressed: (){},
-                        child: Text (
+                      child: FlatButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ChangePasswordPage()));
+                        },
+                        child: Text(
                           'Change Password',
-                          style: TextStyle (
+                          style: TextStyle(
                             color: Colors.white,
                           ),
                         ),
@@ -161,30 +169,27 @@ class _EditProfileBodyState extends State<EditProfileBody> {
                 ),
               ),
             ),
-            Container (
+            Container(
               height: 50,
               width: screenWidth,
-              decoration: BoxDecoration (
-                boxShadow: [
-                  BoxShadow(
-                    offset: Offset (1,1),
-                    blurRadius: 2.0,
-                    spreadRadius: 2.0,
-                    color: Colors.white,
-                  )
-                ]
-              ),
+              decoration: BoxDecoration(boxShadow: [
+                BoxShadow(
+                  offset: Offset(1, 1),
+                  blurRadius: 2.0,
+                  spreadRadius: 2.0,
+                  color: Colors.white,
+                )
+              ]),
               child: FlatButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return ;
-                      }));
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return;
+                  }));
                 },
                 color: Colors.blue,
-                child: Text (
+                child: Text(
                   'Save',
-                  style: TextStyle (
+                  style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w600,
                   ),
